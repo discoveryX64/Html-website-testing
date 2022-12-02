@@ -1,14 +1,48 @@
-<!doctype html>
-<head>
-  <title>
-    KylerKomix
-  </title>
-  <style>
-    .header {
-      size: 50px;
-    } 
-  </style>
-</head>
-<body>
-  <p class=".header">heha</p>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            To-do list app
+        </title>
+        <style>
+            .Header{
+                font-size: 26px;
+                color: black;
+                text-align: center;
+            }
+            .text {
+                font-size: 18px;
+                color: black;
+            }
+            body {
+                background-color: lightblue;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .pad {
+                padding: 25px;
+            }
+            input[type="button"] {
+                background-color: pink;
+            }
+        </style>
+        <script>
+            function addItem() {
+                var newItem = document.createElement("div");
+                newItem.innerHTML = document.getElementById("box").value;
+                newItem.onclick = removeItem;
+                document.getElementById("list").appendChild(newItem);
+            }
+            function removeItem() {
+                document.getElementById("list").removeChild(this);
+            }
+        </script>
+    </head>
+    <body>
+        <p class="Header" style="text-align: left;">Testing To-Do List</p>
+        <br>
+        <br>
+        <input type="text" id="box" value="Type here to add task"/>
+        <input type="button" value="Add Item" onclick="addItem();"/>
+        <div id="list" onclick="addItem"></div>
+    </body>
+</html>
