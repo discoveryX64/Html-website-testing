@@ -22,12 +22,16 @@
         color: grey;
         background-color: white;
       }
-      .infotextbottom {
-        font-size: 14px;
-        color: grey;
-        background-color: white;
-        bottom: 5px;
-        text-align: left;
+      .bottom {
+        height: 100px;
+        border: 5px solid black;
+        display: flex;
+      }
+      .bottomchild {
+        height: 40px;
+        width: 100%;
+        background: grey;
+        align-self: flex-end;
       }
       body {
         background-image: url("/Html-website-testing/images/skeletonsmoking.jpeg");
@@ -38,9 +42,15 @@
     <p class="header" style="text-align: center;">DiscoveryX64's testing site</p>
     <a href="/Html-website-testing/Todolist/" target="_blank" class="text">To-Do List</a>
     <br>
+    <p> </p>
     <a href="/Html-website-testing/AudioTest/" target="_blank" class="text">Audio Test Site</a>
     <br>
-    <a href="https://github.com/discoveryX64" target="_blank" class="infotextbottom">Github</a>
-    <a href="https://replit.com/@LandynBozek" target="_blank" class="infotextbottom">Replit</a>
+    <p> </p>
+    <div class="parent">
+      <div class="child">
+        <a href="https://github.com/discoveryX64" target="_blank" class="infotext">Github</a>
+        <a href="https://replit.com/@LandynBozek" target="_blank" class="infotext">Replit</a>
+      </div>
+    </div>
   </body>
 </html>
